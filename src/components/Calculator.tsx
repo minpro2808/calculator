@@ -63,11 +63,11 @@ export const Calculator = () => {
       } else {
         setEmotion('sad');
       }
-    } catch (_) {
-      setDisplay('Error');
-      setExpression('Error');
-      setEmotion('confused');
-    }
+    } catch {
+        setDisplay('Error');
+        setExpression('Error');
+        setEmotion('confused');
+      }
   }, [expression]);
 
   const clear = useCallback(() => {
